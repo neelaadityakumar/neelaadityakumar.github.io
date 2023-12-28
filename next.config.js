@@ -3,8 +3,8 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  // distDir: "out",
-  // basePath: "/github-pages",
+  distDir: "out",
+  basePath: "/github-pages",
   assetPrefix: "./",
 };
 
