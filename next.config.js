@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   distDir: "out",
+  output: "export",
   basePath: "/github-pages",
   assetPrefix: "./",
 };
