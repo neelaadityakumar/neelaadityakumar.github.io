@@ -2,18 +2,20 @@
 
 const production = process.env.NODE_ENV === "production";
 const prodConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
+  distDir: "out",
   output: "export",
   basePath: "/github-pages",
 };
-const nextConfig = {
+const devConfig = {
   reactStrictMode: false,
   swcMinify: true,
   distDir: "out",
 };
-
-if (production) {
-  nextConfig.output = prodConfig.output;
-  nextConfig.basePath = prodConfig.basePath;
+let nextConfig = prodConfig;
+if (!production) {
+  nextConfig = { ...devConfig };
 }
 
 module.exports = nextConfig;
