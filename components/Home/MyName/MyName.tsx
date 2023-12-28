@@ -76,10 +76,10 @@ export default function MyName(props: { finishedLoading: boolean }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        I&apos;m a <span className="text-AAsecondary">software engineer</span>,
-        i possess strong problem-solving skills and specialize in crafting
-        exceptional <br className="2xl:block hidden" />
-        digital experiences. My current area of focus is in the{" "}
+        <span className="text-AAsecondary">software engineer</span>, with over
+        3+ years of experience in the industry.
+        <br className="2xl:block hidden" />
+        d. My current area of focus is in the{" "}
         <span className="text-AAsecondary">web3 domain</span>, where I actively
         engage in developing <br className="2xl:block hidden" />
         and designing immersive{" "}
