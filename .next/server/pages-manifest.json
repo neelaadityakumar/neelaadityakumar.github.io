@@ -1,6 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/api/typing/[minLength]": "pages/api/typing/[minLength].js",
+  "/api/userInfoByIP/[userInfo]": "pages/api/userInfoByIP/[userInfo].js",
+  "/api/userInfoByLatLon/[lat]/[lon]": "pages/api/userInfoByLatLon/[lat]/[lon].js",
+  "/": "pages/index.js",
+  "/test": "pages/test.js",
+  "/typing": "pages/typing.js",
+  "/userdatapuller": "pages/userdatapuller.js",
+  "/_document": "pages/_document.js"
 }
