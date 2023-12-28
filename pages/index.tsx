@@ -124,8 +124,8 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Abdellatif Anaflous - Software Engineer",
-    description: `I've been working on Software development for 5 years straight. Get in touch with me to know more.`,
+    title: "Aditya Kumar - Software Engineer",
+    description: `I've been working on Software development for 3+ years. Get in touch with me to know more.`,
     image: "/titofCercle.png",
     type: "website",
   };
@@ -185,7 +185,7 @@ export default function Home() {
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
           {context.sharedState.finishedLoading ? (
             <Footer
-              githubUrl={"https://github.com/hktitof/my-website"}
+              githubUrl={"https://github.com/neelaadityakumar"}
               hideSocialsInDesktop={true}
             />
           ) : (

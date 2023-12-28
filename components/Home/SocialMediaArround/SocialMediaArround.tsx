@@ -53,10 +53,6 @@ export default function SocialMediaEmail(props: { finishedLoading: boolean }) {
             {/* Instagram Icon */}
             {/* <IconClickableWithAnimation Icon={InstagramIcon} href={"https://www.instagram.com/xredme/"} /> */}
             {/* Youtube Icon */}
-            {/* <IconClickableWithAnimation
-              Icon={YoutubeIcon}
-              href={"https://www.youtube.com/@abdellatif_anaflous"}
-            /> */}
           </div>
           <div className="h-28 w-0.5 bg-gray-400"></div>
         </div>
@@ -86,13 +82,12 @@ export default function SocialMediaEmail(props: { finishedLoading: boolean }) {
             className=""
           >
             <a
-              href="mailto:abdellatif@anaflous.com"
+              href="mailto:neelaadityakumar@gmail.com"
               target={"_blank"}
               rel="noreferrer"
             >
               <span className=" font-Header tracking-wider text-gray-400 hover:text-AAsecondary hover:cursor-pointer">
-                abdellatif<span className="text-AAsecondary">@</span>anaflous
-                <span className="text-AAsecondary">.</span>com
+                neelaadityakumar@gmail.com
               </span>
             </a>
           </motion.div>

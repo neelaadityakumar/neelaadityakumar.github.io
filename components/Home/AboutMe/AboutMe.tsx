@@ -3,14 +3,21 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const technologies = [
-    ["Next.js", "JavaScript (ES6+)", "Tailwind CSS", "React.js", "EmberJs"],
-    ["Node.js", "TypeScript", "Swiper", "react-moralis", "web3.js"],
+    [
+      "Next.js",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "React.js",
+      "EmberJs",
+      "Swiper",
+    ],
+    ["TypeScript", "Node.js", "Express.js", "MongoDB", "SQL", "PostgreSQL"],
   ];
   return (
     <div
       id="aboutSection"
       data-aos="fade-up"
-      className="snap-start flex flex-col  items-center py-20 bg-AAprimary"
+      className="snap-start md:ml-20 flex flex-col justify-between items-center py-20 bg-AAprimary"
     >
       {/* // ? 0.1 About Me */}
       <div
@@ -36,18 +43,21 @@ export default function AboutMe(props) {
         </div>
         {/* // ? Paragraphs */}
 
-        <div className="w-full flex flex-col md:flex-row space-y-8 md:space-y-0  md:space-x-8 sm:space-x-2 ">
-          <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
+        <div className="w-full flex flex-col md:flex-row space-y-8 sm:space-x-2 ">
+          <div className="w-full space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
                 I'm Aditya Kumar , an adept software engineer with over 3+ years
-                of experience in the industry. With a passion & experience for
-                taking end-to-end ownership of my work, I have a proven track
-                record of delivering high-quality products while working with
-                cross-functional teams. I wield a versatile skill set,
-                specializing in crafting seamless user experiences across the
-                spectrum of frontend, backend & cross mobile platform
-                app(android, ios) development.
+                of experience in the industry.
+                <br />
+                With a passion & experience for taking end-to-end ownership of
+                my work,
+                <br />I have a proven track record of delivering high-quality
+                products while working with cross-functional teams.
+                <br />I wield a versatile skill set, specializing in crafting
+                seamless user experiences across the spectrum of frontend,{" "}
+                <br />
+                backend & cross mobile platform app(android, ios) development.
                 {/* Proficient in Computer
                 fundamentals, With expertise in Javascript, React, Next.js,
                 Node.js, Express.js, Css and Capacitor. */}
@@ -126,7 +136,7 @@ export default function AboutMe(props) {
             </div>
           </div>
           {/* // ? Image in Desktop and Tablet */}
-          <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
+          {/* <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
             <div
               className="group-hover:translate-x-3 group-hover:translate-y-3
                duration-300 absolute w-5/6 h-5/6 border-2 border-AAsecondary translate-x-5 
@@ -141,9 +151,9 @@ export default function AboutMe(props) {
                 alt="My Image Not Found"
               />
             </div>
-          </div>
+          </div> */}
           {/* // ?Image in Mobile */}
-          <div className=" relative w-full h-48 md:hidden  flex justify-center items-center">
+          {/* <div className=" relative w-full h-48 md:hidden  flex justify-center items-center">
             <div className="absolute w-48 h-full  rounded  translate-x-5 translate-y-5 border-2 border-AAsecondary"></div>
             <div className="absolute w-48 h-full rounded overflow-hidden">
               <Img
@@ -153,7 +163,7 @@ export default function AboutMe(props) {
               />
             </div>
             <div className="absolute w-48 h-full  bg-AAsecondary opacity-10 md:opacity-60  rounded overflow-hidden"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
