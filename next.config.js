@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  distDir: "docs",
+  distDir: "build",
   output: "export",
   basePath: "/github-pages",
 };
