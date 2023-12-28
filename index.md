@@ -10,14 +10,13 @@ title: "Aditya's Profile"
 </div>
 <div align = "left">
 
-
 <br /><br />
 Greetings, I'm <a href="https://www.linkedin.com/in/aditya-kumar-994aa6155/">Aditya Kumar</a>, an adept software engineer with over 3+ years of experience in the industry.
 
-I wield a versatile skill set, specializing in crafting seamless user experiences across the spectrum of frontend and backend development. Proficient in optimizing web performance, conducting meticulous code reviews, and refining code quality, I thrive in the domain of full-stack development.
+With a passion & experience for taking end-to-end ownership of my work, I have a proven track record of delivering high-quality products while working with cross-functional teams.
 
-With expertise in React, Next.js, Node.js, and Capacitor, I actively contribute to crafting and enhancing cross-platform solutions that resonate across diverse user bases and international markets. This proficiency in frontend finesse merges seamlessly with my in-depth understanding of robust backend architectures.
+I wield a versatile skill set, specializing in crafting seamless user experiences across the spectrum of frontend,backend & cross mobile platform app(android,ios) development.
 
-My technical acumen extends to embracing CSS intricacies, balancing design aesthetics with functional efficiency. This holistic approach enables me to craft end-to-end solutions that elevate user engagement while streamlining operational efficiency.
+Proficient in Computer fundamentals, With expertise in Javascript, React, Next.js, Node.js, Express.js, css and Capacitor.
 
 </div>
