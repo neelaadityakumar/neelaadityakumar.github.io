@@ -76,17 +76,26 @@ export default function MyName(props: { finishedLoading: boolean }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        An adept<span className="text-AAsecondary">software engineer</span>,
-        with over 3+ years of experience in the industry.
+        An adept <span className="text-AAsecondary">software engineer</span>,
+        with over <span className="text-AAsecondary">3+ years </span> of
+        experience in the industry.
         <br className="2xl:block hidden" />
-        My current area of focus is in the{" "}
-        <span className="text-AAsecondary">web3 domain</span>, where I actively
-        engage in developing <br className="2xl:block hidden" />
-        and designing immersive{" "}
-        <span className="text-AAsecondary">web3 applications</span>. This
-        involves working with{" "}
-        <span className="text-AAsecondary">Smart Contracts</span> on the{" "}
-        <span className="text-AAsecondary">Blockchain</span>.
+        With a passion & experience for taking{" "}
+        <span className="text-AAsecondary">end-to-end </span> ownership of the
+        projects <br className="2xl:block hidden" />
+        Proven track record of delivering high-quality products while working
+        with <span className="text-AAsecondary">cross-functional teams </span> .
+        <br className="2xl:block hidden" /> Skilled in{" "}
+        <span className="text-AAsecondary">
+          frontend, backend & cross platform{" "}
+        </span>{" "}
+        app(android, ios) development.
+        <br className="2xl:block hidden" /> Proficient in Computer fundamentals,
+        with expertise in{" "}
+        <span className="text-AAsecondary">
+          {" "}
+          Javascript, React, Next.js, Node.js, Express.js, CSS and Capacitor.{" "}
+        </span>
         {/* <br className="2xl:block hidden" />creating and deploying them, as well as implementing the
         front-end components to enable seamless user interactions. */}
       </motion.h3>
