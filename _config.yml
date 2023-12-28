@@ -18,11 +18,11 @@ minimal: true # use a dark header
 navigation: # accepts {file, title, url, icon, sidebaricon}
   - { file: "index.md", title: "Homepage" }
   - { url: "/ADITYA-KUMAR-RESUME.pdf", title: "CV" }
-  - { file: "blog.md", title: "Blog" }
-
-external: # shows a footer with social links - for available icons see fontawesome.com/icons
+  # - { file: "blog.md", title: "Blog" }
   - { title: Mail, icon: envelope, url: "mailto:neelaadityakumar@gmail.com" }
   - { title: Github, icon: github, url: "https://github.com/neelaadityakumar" }
+
+external: # shows a footer with social links - for available icons see fontawesome.com/icons
   - {
       title: Subscribe,
       icon: medium-m,
