@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  distDir: "build",
+  distDir: "docs",
   output: "export",
 };
 
