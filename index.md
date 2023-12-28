@@ -12,8 +12,9 @@ title: "Aditya's Profile"
 
 <br /><br />
 Greetings, I'm <a href="https://www.linkedin.com/in/aditya-kumar-994aa6155/">Aditya Kumar</a>, an adept software engineer with over 3+ years of experience in the industry.
-
+<br /><br />
 With a passion & experience for taking end-to-end ownership of my work, I have a proven track record of delivering high-quality products while working with cross-functional teams.
+<br /><br />
 
 I wield a versatile skill set, specializing in crafting seamless user experiences across the spectrum of frontend,backend & cross mobile platform app(android,ios) development.
 
