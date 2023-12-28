@@ -26,7 +26,7 @@ navigation: # accepts {file, title, url, icon, sidebaricon}
       url: "https://www.linkedin.com/in/aditya-kumar-994aa6155/",
     }
 
-  - { url: "/ADITYA-KUMAR-RESUME.pdf", title: "CV" }
+  - { url: "/ADITYA-KUMAR-RESUME.pdf", title: "CV", icon: file-pdf }
 external: # shows a footer with social links - for available icons see fontawesome.com/icons
   - {
       title: Subscribe,
