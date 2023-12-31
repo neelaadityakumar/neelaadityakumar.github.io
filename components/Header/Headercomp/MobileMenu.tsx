@@ -57,7 +57,7 @@ const MobileMenu = (props) => {
               Experience
             </span>
           </Link>
-          <Link
+          {/* <Link
             to="SomethingIveBuiltSection"
             spy={true}
             smooth={true}
@@ -73,7 +73,7 @@ const MobileMenu = (props) => {
             >
               Work
             </span>
-          </Link>
+          </Link> */}
           <Link
             to="GetInTouchSection"
             spy={true}
@@ -83,7 +83,7 @@ const MobileMenu = (props) => {
             onClick={() => closeMenu()}
             className="flex flex-col text-center space-y-2"
           >
-            <span className="text-AAsecondary text-xs font-mono">04.</span>
+            <span className="text-AAsecondary text-xs font-mono">03.</span>
             <span
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
