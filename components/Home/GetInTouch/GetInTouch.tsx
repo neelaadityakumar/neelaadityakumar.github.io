@@ -1,11 +1,12 @@
 import React from "react";
 import ArrowIcon from "../../Icons/ArrowIcon";
+import Contact from "../../Contact";
 export default function GetInTouch() {
   return (
     <div
       id="GetInTouchSection"
       data-aos="fade-up"
-      className="flex flex-col space-y-4 w-full h-96 items-center bg-AAprimary"
+      className="flex flex-col space-y-4 w-full pb-16 items-center bg-AAprimary"
     >
       {/* // ? Title === > What's Next?  */}
       <div className="flex flex-row items-center ">
@@ -20,7 +21,7 @@ export default function GetInTouch() {
           </span>
         </div>
       </div>
-      {/* // ? Get In Touch */}
+
       <span className="text-gray-200 text-3xl sm:text-4xl font-bold tracking-wider opacity-85">
         Get In Touch
       </span>
@@ -29,14 +30,16 @@ export default function GetInTouch() {
         open. Whether you have a question or just want to say hi, I&apos;ll try
         my best to get back to you!
       </p>
-      <div className="pt-4">
+      <Contact />
+
+      <div className="my-8 pt-4">
         <a
           href="mailto:neelaadityakumar@gmail.com"
           target={"_blank"}
           rel="noreferrer"
         >
           <button
-            className="font-mono text-sm text-AAsecondary border-AAsecondary 
+            className="font-mono text-sm text-AAsecondary border-AAsecondary
                             px-8 py-4 border-[1.5px] rounded "
           >
             Say Hello
