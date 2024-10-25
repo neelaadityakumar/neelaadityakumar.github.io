@@ -21,28 +21,32 @@ function Contact() {
         <div className="mt-8 flex items-center gap-5 lg:gap-10">
           <Link target="_blank" href={personalData.email}>
             <MdEmail
-              className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+              className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
+              color="#64ffda"
             />{" "}
           </Link>
 
           <Link target="_blank" href={personalData.phone}>
             <IoMdCall
-              className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+              className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
+              color="#64ffda"
             />{" "}
           </Link>
 
           <Link target="_blank" href={personalData.github}>
             <IoLogoGithub
-              className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+              className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
+              color="#64ffda"
             />
           </Link>
           <Link target="_blank" href={personalData.linkedIn}>
             <BiLogoLinkedin
-              className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+              className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
+              color="#64ffda"
             />
           </Link>
         </div>

@@ -257,7 +257,7 @@ const skillsData = [
 ];
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 max-w-[80%] mx-auto">
+    <div id="skills" className="relative z-50 mt-20 max-w-[85%] mx-auto">
       <div className="w-full my-6">
         <Marquee
           gradient={false}
@@ -290,6 +290,11 @@ function Skills() {
                     />
                   </div>
                   <p className="text-white text-sm sm:text-lg">{skill}</p>
+                </div>{" "}
+                <div className="flex -translate-y-[1px] justify-center">
+                  <div className="w-3/4">
+                    <div className="h-[1px] w-full bg-gradient-to-r from-[#153040] via-[#64ffda] to-[#153040]" />
+                  </div>
                 </div>
               </div>
             </div>
