@@ -1,5 +1,4 @@
 import Header from "../components/Header/Header";
-import Startup from "../components/Header/StartupLogo/Startup";
 import MyName from "../components/Home/MyName/MyName";
 import { useContext, useEffect, useState, useRef } from "react";
 import SocialMediaArround from "../components/Home/SocialMediaArround/SocialMediaArround";
@@ -97,7 +96,7 @@ export default function Home() {
         <AboutMe ref={aboutRef} />
 
         <WhereIHaveWorked />
-
+        <GetInTouch />
         <Footer
           githubUrl={"https://github.com/neelaadityakumar"}
           hideSocialsInDesktop={true}
