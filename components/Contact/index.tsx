@@ -19,7 +19,7 @@ function Contact() {
     >
       <div>
         <div className="mt-8 flex items-center gap-5 lg:gap-10">
-          <Link target="_blank" href={personalData.email}>
+          <Link href={`mailto:${personalData.email}`}>
             <MdEmail
               className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
@@ -27,7 +27,7 @@ function Contact() {
             />{" "}
           </Link>
 
-          <Link target="_blank" href={personalData.phone}>
+          <Link href={`tel:${personalData.phone}`}>
             <IoMdCall
               className="bg-[#153040] p-3 rounded-full hover:border hover:border-[#64ffda] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
               size={48}
