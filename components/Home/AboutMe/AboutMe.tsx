@@ -21,7 +21,7 @@ export default function AboutMe(props) {
     >
       {/* // ? 0.1 About Me */}
       <div
-        className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px] 
+        className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px]
         md:w-[700px] lg:w-[900px] "
       >
         <div className="flex flex-row items-center ">
@@ -47,8 +47,8 @@ export default function AboutMe(props) {
           <div className="w-full space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                I'm Aditya Kumar , an adept software engineer with over 3+ years
-                of experience in the industry.
+                I'm Aditya Kumar ,software engineer with over 4+ years of
+                experience in the industry.
                 <br />
                 With a passion & experience for taking end-to-end ownership of
                 my work,
@@ -139,7 +139,7 @@ export default function AboutMe(props) {
           {/* <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
             <div
               className="group-hover:translate-x-3 group-hover:translate-y-3
-               duration-300 absolute w-5/6 h-5/6 border-2 border-AAsecondary translate-x-5 
+               duration-300 absolute w-5/6 h-5/6 border-2 border-AAsecondary translate-x-5
                translate-y-5 rounded"
             ></div>
 

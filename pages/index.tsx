@@ -11,12 +11,14 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
 import Skills from "../components/Skills";
+
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
 
   const context = useContext(AppContext);
   const aboutRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     // remove the interval Cookie timer setter when
@@ -55,6 +57,7 @@ export default function Home() {
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
+    setIsClient(true);
   }, []);
 
   console.log("website is rendering...");
@@ -91,6 +94,7 @@ export default function Home() {
           sectionsRef={homeRef}
         />
         <MyName finishedLoading={context.sharedState.finishedLoading} />
+
         <SocialMediaArround
           finishedLoading={context.sharedState.finishedLoading}
         />
@@ -99,6 +103,7 @@ export default function Home() {
         <Skills />
         <WhereIHaveWorked />
         <GetInTouch />
+
         <Footer
           githubUrl={"https://github.com/neelaadityakumar"}
           hideSocialsInDesktop={true}
