@@ -64,7 +64,6 @@ export default function Home() {
     image: "/titofCercle.png",
     type: "website",
   };
-  const isProd = true;
 
   return (
     <>
@@ -87,13 +86,6 @@ export default function Home() {
       </Head>
 
       <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-        {context.sharedState.finishedLoading ? (
-          <></>
-        ) : ShowElement ? (
-          <Startup />
-        ) : (
-          <></>
-        )}
         <Header
           finishedLoading={context.sharedState.finishedLoading}
           sectionsRef={homeRef}
@@ -102,21 +94,14 @@ export default function Home() {
         <SocialMediaArround
           finishedLoading={context.sharedState.finishedLoading}
         />
-        {context.sharedState.finishedLoading ? (
-          <AboutMe ref={aboutRef} />
-        ) : (
-          <></>
-        )}
-        {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
-        {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
-        {context.sharedState.finishedLoading ? (
-          <Footer
-            githubUrl={"https://github.com/neelaadityakumar"}
-            hideSocialsInDesktop={true}
-          />
-        ) : (
-          <></>
-        )}
+        <AboutMe ref={aboutRef} />
+
+        <WhereIHaveWorked />
+
+        <Footer
+          githubUrl={"https://github.com/neelaadityakumar"}
+          hideSocialsInDesktop={true}
+        />
       </div>
     </>
   );
