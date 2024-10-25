@@ -2,7 +2,6 @@ import React from "react";
 import GithubIcon from "../Icons/GithubIcon";
 import LinkedinIcon from "../Icons/LinkedinIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
-import YoutubeIcon from "../Icons/YoutubeIcon";
 const ClickableIcon = (props) => {
   return (
     <a href={props.href} className="" target={"_blank"} rel="noreferrer">
@@ -17,7 +16,7 @@ const ClickableIcon = (props) => {
 const IconsData = [
   { href: "https://github.com/neelaadityakumar", Icon: GithubIcon },
   {
-    href: "https://www.linkedin.com/in/aditya-kumar-994aa6155/",
+    href: "https://www.linkedin.com/in/neelaadityakumar",
     Icon: LinkedinIcon,
   },
   { href: "https://www.instagram.com/adityahasnoname/", Icon: InstagramIcon },
@@ -47,7 +46,7 @@ export default function Fotter(props: {
       </div>
       <a href={props.githubUrl} className="" target={"_blank"} rel="noreferrer">
         <div
-          className="group flex flex-col font-mono justify-center items-center  text-gray-400 
+          className="group flex flex-col font-mono justify-center items-center  text-gray-400
     text-sm  space-y-2  "
         >
           <span className="text-xs flex flex-row items-center space-x-2 group-hover:text-AAsecondary">
