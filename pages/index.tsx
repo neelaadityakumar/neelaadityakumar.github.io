@@ -10,6 +10,7 @@ import AppContext from "../components/AppContextFolder/AppContext";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
+import Skills from "../components/Skills";
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
 
@@ -95,6 +96,7 @@ export default function Home() {
         />
         <AboutMe ref={aboutRef} />
 
+        <Skills />
         <WhereIHaveWorked />
         <GetInTouch />
         <Footer
