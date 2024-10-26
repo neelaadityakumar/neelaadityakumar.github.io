@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-let nextConfig = {};
+let nextConfig = {
+  images: {
+    domains: ["images.unsplash.com"],
+  },
+};
 if (process.env.NODE_ENV == "production") {
   nextConfig = {
     ...nextConfig,
