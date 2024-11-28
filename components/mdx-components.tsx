@@ -5,13 +5,31 @@ function CustomH1({ children }: { children: React.ReactNode }) {
     </h1>
   );
 }
+
 function CustomH2({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="text-AAsecondary text-2xl md:text-3xl font-bold">
+    <h2 className="text-AAsecondary text-2xl md:text-3xl font-bold">
       {children}
-    </h1>
+    </h2>
   );
 }
+
+function CustomH3({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="text-AAsecondary text-xl md:text-2xl font-semibold">
+      {children}
+    </h3>
+  );
+}
+
+function CustomH4({ children }: { children: React.ReactNode }) {
+  return (
+    <h4 className="text-AAsecondary text-lg md:text-xl font-medium">
+      {children}
+    </h4>
+  );
+}
+
 function CustomP({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-gray-300 dark:text-gray-300 leading-relaxed">
@@ -19,16 +37,21 @@ function CustomP({ children }: { children: React.ReactNode }) {
     </p>
   );
 }
+
 function CustomStrong({ children }: { children: React.ReactNode }) {
   return (
-    <strong className="text-gray-200 font-[800] dark:text-gray-300 leading-relaxed">
+    <strong className="text-gray-200 font-extrabold dark:text-gray-300 leading-relaxed">
       {children}
     </strong>
   );
 }
 
 function CustomCode({ children }: { children: React.ReactNode }) {
-  return <code className="text-AAsecondary px-2 py-1 rounded">{children}</code>;
+  return (
+    <code className="text-AAsecondary dark:bg-gray-700 px-2 py-1 rounded">
+      {children}
+    </code>
+  );
 }
 
 function CustomUl({ children }: { children: React.ReactNode }) {
@@ -56,12 +79,21 @@ function CustomLi({ children }: { children: React.ReactNode }) {
 }
 
 function CustomImage({ src, alt }: { src: string; alt: string }) {
-  return <img className="w-full max-w-lg mx-auto my-4" src={src} alt={alt} />;
+  return (
+    <img
+      className="w-full max-w-lg mx-auto my-4 rounded-lg shadow-lg"
+      src={src}
+      alt={alt}
+    />
+  );
 }
 
 function CustomVideo({ src, title }: { src: string; title: string }) {
   return (
-    <video className="w-full max-w-lg mx-auto my-4" controls>
+    <video
+      className="w-full max-w-lg mx-auto my-4 rounded-lg shadow-lg"
+      controls
+    >
       <source src={src} type="video/mp4" />
       {title}
     </video>
@@ -70,13 +102,15 @@ function CustomVideo({ src, title }: { src: string; title: string }) {
 
 export const overrideComponents = {
   h1: CustomH1,
+  h2: CustomH2,
+  h3: CustomH3,
+  h4: CustomH4,
   p: CustomP,
+  strong: CustomStrong,
   code: CustomCode,
   ul: CustomUl,
   ol: CustomOl,
   li: CustomLi,
   img: CustomImage,
   video: CustomVideo,
-  strong: CustomStrong,
-  h2: CustomH2,
 };

@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
-@import "prismjs/themes/prism-okaidia.css";
 
 @tailwind base;
 @tailwind components;
@@ -42,3 +41,92 @@ a {
 * {
   box-sizing: border-box;
 }
+/* global.css or global styles file */
+html,
+body {
+  color: #d1d5db; /* Use the custom gray-300 for text */
+  background-color: #1f1f1f; /* Dark background color */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ff6347; /* Use AAsecondary color for all headings */
+}
+
+p {
+  color: #9ca3af; /* Medium gray for paragraphs */
+}
+
+a {
+  color: #ff6347; /* Ensure all links use the secondary color */
+}
+
+code {
+  background-color: #2c2c2c; /* Dark background for code */
+  color: #ff6347; /* Use the secondary color for code text */
+}
+
+ul,
+ol {
+  color: #9ca3af; /* Medium gray for list items */
+}
+
+li {
+  color: #d1d5db; /* Light gray for list item text */
+}
+
+/* Strong and emphasized text */
+strong,
+b {
+  color: #ff6347; /* Use the secondary color for strong text */
+  font-weight: 800;
+}
+
+@layer base {
+  /* Global reset for font-family and text color */
+  html,
+  body {
+    @apply text-gray-300 bg-gray-900;
+  }
+
+  /* Ensure all headings use AAsecondary color */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-AAsecondary;
+  }
+
+  /* Use medium gray for paragraphs */
+  p {
+    @apply text-gray-400;
+  }
+
+  /* Code and strong elements */
+  code {
+    @apply bg-gray-800 text-AAsecondary;
+  }
+
+  strong {
+    @apply text-AAsecondary font-extrabold;
+  }
+
+  /* Style lists */
+  ul,
+  ol {
+    @apply text-gray-400;
+  }
+
+  li {
+    @apply text-gray-300;
+  }
+}
+
+@import "prismjs/themes/prism-okaidia.css";
+@import "prismjs/themes/prism-tomorrow.css";

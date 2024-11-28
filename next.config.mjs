@@ -4,6 +4,18 @@ import rehypePrism from "rehype-prism-plus";
 
 let nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: [
+        options.defaultLoaders.babel,
+        {
+          loader: "@mdx-js/loader",
+        },
+      ],
+    });
+    return config;
+  },
 };
 
 if (process.env.NODE_ENV === "production") {
