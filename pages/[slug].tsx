@@ -3,12 +3,13 @@ import { serialize } from "next-mdx-remote/serialize";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import MdxLayout from "../../components/mdx-layout";
-import { overrideComponents } from "../../components/mdx-components";
-import { posts } from "../../constant";
+
 import rehypePrism from "@mapbox/rehype-prism";
-import Header from "../../components/Header/Header";
-import GetInTouch from "../../components/Home/GetInTouch/GetInTouch";
+import Header from "../components/Header/Header";
+import GetInTouch from "../components/Home/GetInTouch/GetInTouch";
+import { overrideComponents } from "../components/mdx-components";
+import MdxLayout from "../components/mdx-layout";
+import { posts } from "../constant";
 
 export default function BlogPost({ post }) {
   return (

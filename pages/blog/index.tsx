@@ -14,7 +14,7 @@ export default function Home() {
         {posts.map((post) => (
           <li key={post.slug} className="mb-6">
             <Link
-              href={`https://neelaadityakumar.github.io/blog/${post.slug}`}
+              href={`https://neelaadityakumar.github.io/${post.slug}`}
               className="text-AAsecondary text-2xl font-semibold hover:underline"
             >
               {post.title}
