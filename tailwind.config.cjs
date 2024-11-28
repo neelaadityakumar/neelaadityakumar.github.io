@@ -6,7 +6,10 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./markdown/**/*.{md,mdx}",
   ],
+  darkMode: "class",
+
   theme: {
     rotate: {
       "-180": "-180deg",
@@ -54,6 +57,37 @@ module.exports = {
         "4xl": "2560px",
         "5xl": "3840px",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            pre: {
+              backgroundColor: "#000",
+              color: theme("colors.white"),
+              padding: theme("spacing.4"),
+              borderRadius: theme("borderRadius.md"),
+            },
+            "pre code": {
+              backgroundColor: "transparent",
+            },
+            code: {
+              backgroundColor: "#1f2937",
+              color: theme("colors.white"),
+              padding: theme("spacing.1"),
+              borderRadius: theme("borderRadius.md"),
+            },
+          },
+        },
+        dark: {
+          css: {
+            pre: {
+              backgroundColor: "#000",
+            },
+            code: {
+              backgroundColor: "#000",
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [
