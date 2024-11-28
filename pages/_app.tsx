@@ -1,33 +1,9 @@
 import "../styles/globals.css";
 import AppContext from "../components/AppContextFolder/AppContext";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const timerCookie = useRef(null);
-  const windowSizeTrackerRef = useRef(null);
-  const mousePositionRef = useRef(null);
-  const [sharedState, setSharedState] = useState({
-    portfolio: {
-      NavBar: {
-        IntervalEvent: null,
-        scrolling: null,
-        scrollSizeY: null,
-      },
-      Scrolling: {
-        IntervalEvent: null,
-      },
-    },
-    userdata: {
-      timerCookieRef: timerCookie,
-      windowSizeTracker: windowSizeTrackerRef,
-      mousePositionTracker: mousePositionRef,
-    },
-    typing: {
-      keyboardEvent: null,
-      eventInputLostFocus: null,
-    },
-    finishedLoading: true,
-  });
+  const [sharedState, setSharedState] = useState({});
   return (
     <AppContext.Provider value={{ sharedState, setSharedState }}>
       <Component {...pageProps} />

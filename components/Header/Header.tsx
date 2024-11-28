@@ -6,58 +6,10 @@ import MobileMenu from "./Headercomp/MobileMenu";
 import { motion } from "framer-motion";
 import AppContext from "../AppContextFolder/AppContext";
 
-const Header = (props: { finishedLoading: boolean; sectionsRef }) => {
+const Header = (props: any) => {
   const RefNavBar = useRef<HTMLDivElement>(null);
   const [ShowElement, setShowElement] = useState(false);
   const [rotate, setRotate] = useState<boolean>(false);
-  const context = useContext(AppContext);
-  const scrollSizeY = useRef<number>(0);
-
-  // Define the EventListener for the NavBar
-  useEffect(() => {
-    if (context.sharedState.portfolio.NavBar.IntervalEvent == null) {
-      context.sharedState.portfolio.NavBar.IntervalEvent = () => {
-        if (scrollSizeY.current == 0) {
-          scrollSizeY.current = window.scrollY;
-        } else {
-          if (window.scrollY > 50) {
-            if (window.scrollY > scrollSizeY.current) {
-              if (RefNavBar) {
-                RefNavBar.current?.classList.remove("translate-y-0");
-                RefNavBar.current?.classList.add("-translate-y-full");
-              }
-            } else {
-              RefNavBar.current?.classList.add("translate-y-0");
-              RefNavBar.current?.classList.remove("-translate-y-full");
-            }
-            scrollSizeY.current = window.scrollY;
-          }
-        }
-        console.log("Scrolling checking for NavBar ", scrollSizeY.current);
-      };
-    }
-  }, [
-    context.sharedState.portfolio.NavBar,
-    context.sharedState.portfolio.NavBar.IntervalEvent,
-  ]);
-
-  //Adding the EventListener for the NavBar
-  useEffect(() => {
-    if (context.sharedState.portfolio.NavBar.scrolling == null) {
-      context.sharedState.portfolio.NavBar.scrolling = true;
-      scrollSizeY.current = 0;
-      //Hide when scroll down & show when scroll up
-      if (typeof window !== "undefined") {
-        window.addEventListener(
-          "scroll",
-          context.sharedState.portfolio.NavBar.IntervalEvent
-        );
-      }
-    }
-  }, [
-    context.sharedState.portfolio.NavBar,
-    context.sharedState.portfolio.NavBar.scrolling,
-  ]);
 
   useEffect(() => {
     setTimeout(() => {

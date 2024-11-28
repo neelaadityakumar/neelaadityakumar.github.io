@@ -2,7 +2,7 @@ import React from "react";
 
 import experience from "../../../public/lottie/code.json";
 import AnimationLottie from "../../AnimationLottie";
-export default function MyName(props: { finishedLoading: boolean }) {
+export default function MyName(props: any) {
   return (
     <div className="h-full flex flex-col justify-center items-center px-8 2xl:px-72 xl:px-56 lg:px-32  md:px-28 sm:px-8 py-28 text-center md:text-left ">
       <span className="text-AAsecondary font-mono">Greetings, I'm</span>
