@@ -43,7 +43,9 @@ const Header = (props: any) => {
       >
         {/* Logo A */}
         <div className="flex gap-8 items-center">
-          <Logo finishedLoading={true} />
+          <Link href={"https://neelaadityakumar.github.io"}>
+            <Logo finishedLoading={true} />
+          </Link>
           {props.title && (
             <Link
               href={"https://neelaadityakumar.github.io/blog"}
