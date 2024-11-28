@@ -18,7 +18,7 @@ const MobileMenu = (props) => {
           className="w-1/4 h-full backdrop-blur-sm bg-MobileNavColor/30 hover:cursor-pointer"
         ></div>
         <div
-          className="w-3/4 h-full bg-MobileNavBarColor flex flex-col 
+          className="w-3/4 h-full opacity-100 bg-[#1f1f1f] flex flex-col
         justify-center items-center space-y-8 font-sans"
         >
           <Link

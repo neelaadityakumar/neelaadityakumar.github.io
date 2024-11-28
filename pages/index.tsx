@@ -37,7 +37,7 @@ export default function Home() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
+      <div className="relative snap-mandatory min-h-screen w-full ">
         <Header />
         <MyName />
         <AboutMe />

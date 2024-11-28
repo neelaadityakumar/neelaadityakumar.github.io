@@ -24,7 +24,7 @@ export default function WhereIHaveWorked() {
   return (
     <div
       data-aos="fade-up"
-      className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary"
+      className="flex flex-col items-center justify-center py-24 space-y-12 "
     >
       {/* // ? Title "Where I've Worked" */}
       <section className="flex flex-row items-center">
@@ -75,7 +75,7 @@ const CompaniesBar = (props) => {
           );
         }}
         className={`flex-none sm:text-sm text-xs text-center md:text-left  hover:text-AAsecondary
-             hover:bg-ResumeButtonHover rounded  font-mono  
+             hover:bg-ResumeButtonHover rounded  font-mono
              py-3 md:pl-6 md:px-4 md:w-44 w-32 duration-500
              ${
                companyNameBackgroundColorGreen[
@@ -93,13 +93,13 @@ const CompaniesBar = (props) => {
   return (
     <div
       id="WhereIhaveWorkedSection"
-      className=" flex flex-col md:flex-row  w-screen lg:w-auto 
+      className=" flex flex-col md:flex-row  w-screen lg:w-auto
       overflow-auto scrollbar-hide md:overflow-hidden pb-4 md:pb-0 justify-start
        sm:justify-center items-start "
     >
       {/* // ? left bar Holder */}
       <div
-        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-[380px] translate-y-1 md:w-0.5  
+        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-[380px] translate-y-1 md:w-0.5
         rounded md:order-1 order-2  "
       >
         {/* // ? animated left bar */}

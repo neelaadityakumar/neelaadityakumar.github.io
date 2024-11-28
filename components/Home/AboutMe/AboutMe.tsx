@@ -16,7 +16,7 @@ export default function AboutMe(props) {
     <div
       id="aboutSection"
       data-aos="fade-up"
-      className="snap-start md:ml-20 flex flex-col justify-between items-center bg-AAprimary"
+      className="snap-start md:ml-20 flex flex-col justify-between items-center"
     >
       {/* // ? 0.1 About Me */}
       <div
