@@ -5,6 +5,7 @@ import WhereIHaveWorked from "../components/Home/WhereIHaveWorked/WhereIHaveWork
 import GetInTouch from "../components/Home/GetInTouch/GetInTouch";
 import Head from "next/head";
 import Skills from "../components/Skills";
+import ArrowIcon from "../components/Icons/ArrowIcon";
 
 const meta = {
   title: "Aditya Kumar - Software Engineer",
@@ -43,7 +44,22 @@ export default function Home() {
         <AboutMe />
         <Skills />
         <WhereIHaveWorked /> {/* <SomethingIveBuilt /> */}
-        <GetInTouch />
+        <div className="flex flex-col space-y-4 w-full pb-16 items-center ">
+          {" "}
+          <div className="flex flex-row items-center ">
+            <ArrowIcon className="flex-none h-5 md:h-6 w-5 md:w-5 text-AAsecondary" />
+            <div className="flex flex-row space-x-2 items-center">
+              <span className="text-AAsecondary font-sans text-sm  sm:text-base">
+                {" "}
+                03.
+              </span>
+              <span className=" font-sans text-AAsecondary text-base">
+                What&apos;s Next?
+              </span>
+            </div>
+          </div>{" "}
+          <GetInTouch />
+        </div>
       </div>
     </>
   );

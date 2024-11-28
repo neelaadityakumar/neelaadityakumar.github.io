@@ -7,10 +7,14 @@ import MdxLayout from "../../components/mdx-layout";
 import { overrideComponents } from "../../components/mdx-components";
 import { posts } from "../../constant";
 import rehypePrism from "@mapbox/rehype-prism";
+import Header from "../../components/Header/Header";
+import GetInTouch from "../../components/Home/GetInTouch/GetInTouch";
 
 export default function BlogPost({ post }) {
   return (
-    <div className="container bg-[#1f1f1f] mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pt-24">
+      {" "}
+      <Header title="Blog Home" />
       <MdxLayout>
         <div>
           <h1 className="text-AAsecondary text-4xl font-bold">{post.title}</h1>
@@ -21,6 +25,7 @@ export default function BlogPost({ post }) {
           </div>
         </div>
       </MdxLayout>{" "}
+      <GetInTouch />
     </div>
   );
 }
