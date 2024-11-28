@@ -98,6 +98,7 @@ const MobileMenu = (props) => {
             offset={100}
             duration={200}
             onClick={() => closeMenu()}
+            href={"https://neelaadityakumar.github.io/blog"}
             className="flex flex-col text-center space-y-2"
           >
             <span className="text-AAsecondary text-xs font-mono">04.</span>
