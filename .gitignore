@@ -1,6 +1,7 @@
 build
 out
 .env.local
+.next/
 
 .env
 # Node modules

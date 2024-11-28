@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/_app.js",
-    "components/mdx-components.tsx"
+    "components/mdx-components.tsx",
+    "next.config.mjs"
   ],
   "exclude": ["node_modules"]
 }

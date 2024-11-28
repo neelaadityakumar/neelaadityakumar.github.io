@@ -1,14 +1,12 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./Headercomp/Logo";
 import DesktopMenu from "./Headercomp/DesktopMenu";
 import IconMenu from "./Headercomp/IconMenu";
 import MobileMenu from "./Headercomp/MobileMenu";
-import { motion } from "framer-motion";
-import AppContext from "../AppContextFolder/AppContext";
+
 import Link from "next/link";
 
 const Header = (props: any) => {
-  const RefNavBar = useRef<HTMLDivElement>(null);
   const [ShowElement, setShowElement] = useState(false);
   const [rotate, setRotate] = useState<boolean>(false);
 
@@ -48,7 +46,7 @@ const Header = (props: any) => {
           <Logo finishedLoading={true} />
           {props.title && (
             <Link
-              href={`/blog/`}
+              href={"https://neelaadityakumar.github.io/blog"}
               className="text-AAsecondary text-2xl font-semibold hover:underline"
             >
               {props.title}
