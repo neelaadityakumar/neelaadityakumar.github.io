@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-AAprimary text-AAtertiary dark:bg-AAtertiary dark:text-AAsecondary p-6">
+    <div className="min-h-screen text-AAtertiary dark:bg-AAtertiary dark:text-AAsecondary p-6">
       <header className="text-center mb-12">
         <h1 className="text-AAsecondary font-bold text-4xl md:text-6xl">
           Blog

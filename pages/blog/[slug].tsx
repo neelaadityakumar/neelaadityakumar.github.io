@@ -10,16 +10,18 @@ import rehypePrism from "@mapbox/rehype-prism";
 
 export default function BlogPost({ post }) {
   return (
-    <MdxLayout>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-AAsecondary text-4xl font-bold">{post.title}</h1>
-        <div className="mt-6">
-          {/* Render the MDX content using MDXRemote */}
+    <div className="container bg-[#1f1f1f] mx-auto px-4 py-8">
+      <MdxLayout>
+        <div>
+          <h1 className="text-AAsecondary text-4xl font-bold">{post.title}</h1>
+          <div className="mt-6">
+            {/* Render the MDX content using MDXRemote */}
 
-          <MDXRemote {...post.content} components={overrideComponents} />
+            <MDXRemote {...post.content} components={overrideComponents} />
+          </div>
         </div>
-      </div>
-    </MdxLayout>
+      </MdxLayout>{" "}
+    </div>
   );
 }
 

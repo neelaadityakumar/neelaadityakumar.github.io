@@ -48,13 +48,23 @@ function CustomStrong({ children }: { children: React.ReactNode }) {
 
 function CustomCode({ children }: { children: React.ReactNode }) {
   return (
-    <code className="text-AAsecondary dark:bg-gray-700 px-2 py-1 rounded">
-      {children}
-    </code>
+    <code className="text-AAsecondary rounded-xl  px-2 py-1">{children}</code>
   );
 }
 
-function CustomUl({ children }: { children: React.ReactNode }) {
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Custom unordered list component that applies consistent styling
+ * for list items. It uses Tailwind CSS classes to set the list style
+ * to disc, padding, and text color for both light and dark themes.
+ *
+ * @param children - The content to be displayed inside the list.
+ */
+/******  5ab103d3-b2c8-4ba5-9eb4-93e7ca4b2528  *******/ function CustomUl({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <ul className="list-disc pl-6 text-gray-400 dark:text-gray-300 space-y-2">
       {children}
