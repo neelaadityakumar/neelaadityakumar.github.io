@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link as ReactScrollLink } from "react-scroll";
+import Link from "next/link";
 
 export default function DesktopMenu(props: { finishedLoading: boolean }) {
   return (
@@ -120,6 +121,29 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
             Contact
           </span>
         </ReactScrollLink>
+      </motion.span>{" "}
+      <motion.span
+        initial={{
+          y: -40,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          type: "spring",
+          duration: props.finishedLoading ? 0 : 1.2,
+          delay: props.finishedLoading ? 0 : 10,
+        }}
+        className="text-AAsecondary"
+      >
+        <Link href="/blog">
+          &gt; 04.{" "}
+          <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">
+            Blog
+          </span>
+        </Link>
       </motion.span>
       <a href={"/ADITYA-KUMAR-RESUME.pdf"} target={"_blank"} rel="noreferrer">
         <motion.button
