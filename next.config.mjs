@@ -4,6 +4,9 @@ import rehypePrism from "rehype-prism-plus";
 
 let nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  images: {
+    unoptimized: true,
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.mdx$/,
