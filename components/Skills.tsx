@@ -245,15 +245,10 @@ const skillsData = [
   "PostgreSQL",
   "Git",
   "AWS",
-
   "Figma",
   "Firebase",
   "MaterialUI",
   "Nginx",
-  //   "Strapi",
-  //   "Bootstrap",
-  //   "Docker",
-  //   "Go",
 ];
 function Skills() {
   return (
