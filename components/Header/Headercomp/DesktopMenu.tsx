@@ -138,7 +138,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         }}
         className="text-AAsecondary"
       >
-        <Link href="/blog">
+        <Link href="https://neelaadityakumar.github.io/blog">
           &gt; 04.{" "}
           <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">
             Blog
