@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import MdxLayout from "../../components/mdx-layout";
 import { overrideComponents } from "../../components/mdx-components";
 import { posts } from "../../constant";
+import rehypePrism from "@mapbox/rehype-prism";
 
 export default function BlogPost({ post }) {
   return (
@@ -14,6 +15,7 @@ export default function BlogPost({ post }) {
         <h1 className="text-AAsecondary text-4xl font-bold">{post.title}</h1>
         <div className="mt-6">
           {/* Render the MDX content using MDXRemote */}
+
           <MDXRemote {...post.content} components={overrideComponents} />
         </div>
       </div>
@@ -37,7 +39,11 @@ export async function getStaticProps({ params }) {
 
   const { content, data } = matter(fileContent);
 
-  const mdxContent = await serialize(content);
+  const mdxContent = await serialize(content, {
+    mdxOptions: {
+      rehypePlugins: [rehypePrism],
+    },
+  });
 
   return {
     props: {
