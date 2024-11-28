@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
     distDir: "out",
     output: "export",
     basePath: "/github-pages",
-    assetPrefix: "./blog",
+    assetPrefix: "./",
   };
 }
 
