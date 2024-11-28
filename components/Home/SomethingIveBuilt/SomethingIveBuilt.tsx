@@ -11,7 +11,7 @@ export default function SomethingIveBuilt() {
   return (
     <div
       id="SomethingIveBuiltSection"
-      className=" flex flex-col xl:space-y-28 space-y-12 bg-AAprimary w-full  
+      className=" flex flex-col xl:space-y-28 space-y-12 bg-AAprimary w-full
      2xl:px-72 lg:px-24 md:px-16 sm:px-16 py-32 px-4"
     >
       {/* // ? Title  */}
@@ -42,14 +42,14 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
               {/* <Link href={"/typing"}>
                 <div
                   // onClick={}
-                  className="absolute w-full h-full rounded bg-AAsecondary 
+                  className="absolute w-full h-full rounded bg-AAsecondary
            transition-opacity opacity-20 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </Link> */}
@@ -61,7 +61,7 @@ export default function SomethingIveBuilt() {
               >
                 <div
                   // onClick={}
-                  className="absolute w-full h-full rounded bg-AAprimary 
+                  className="absolute w-full h-full rounded bg-AAprimary
            transition-opacity opacity-30 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
@@ -90,7 +90,7 @@ export default function SomethingIveBuilt() {
             </div>
 
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5 
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5
             col-span-8 flex flex-col items-start md:items-end space-y-3"
             >
               <div className="flex flex-col space-y-1 md:items-end z-10">
@@ -149,7 +149,7 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
@@ -159,7 +159,7 @@ export default function SomethingIveBuilt() {
                 rel="noreferrer"
               >
                 <div
-                  className="absolute w-full h-full rounded bg-AAprimary 
+                  className="absolute w-full h-full rounded bg-AAprimary
            transition-opacity opacity-50 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
@@ -187,7 +187,7 @@ export default function SomethingIveBuilt() {
             </div>
 
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6
             col-span-8 flex flex-col items-start  space-y-3 md:order-1"
             >
               <div className="flex flex-col space-y-1  z-10">
@@ -252,14 +252,14 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
               <Link href={"/typing"}>
                 <div
                   // onClick={}
-                  className="absolute w-full h-full rounded bg-AAsecondary 
+                  className="absolute w-full h-full rounded bg-AAsecondary
            transition-opacity opacity-10 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </Link>
@@ -288,7 +288,7 @@ export default function SomethingIveBuilt() {
             </div>
 
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5 
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5
             col-span-8 flex flex-col items-start md:items-end space-y-3"
             >
               <div className="flex flex-col space-y-1 md:items-end z-10">
@@ -336,13 +336,13 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
               <Link href={"/userdatapuller"}>
                 <div
-                  className="absolute w-full h-full rounded bg-AAsecondary 
+                  className="absolute w-full h-full rounded bg-AAsecondary
            transition-opacity opacity-10 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </Link>
@@ -370,7 +370,7 @@ export default function SomethingIveBuilt() {
             </div>
 
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6
             col-span-8 flex flex-col items-start  space-y-3 md:order-1"
             >
               <div className="flex flex-col space-y-1  z-10">
@@ -421,7 +421,7 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
@@ -432,7 +432,7 @@ export default function SomethingIveBuilt() {
               >
                 <div
                   // onClick={}
-                  className="absolute w-full h-full rounded bg-AAprimary 
+                  className="absolute w-full h-full rounded bg-AAprimary
            transition-opacity opacity-50 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
@@ -472,7 +472,7 @@ export default function SomethingIveBuilt() {
               </span>
             </div>
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5 
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 xl:col-start-7 col-start-5
             col-span-8 flex flex-col items-start md:items-end sm:space-y-3 space-y-1"
             >
               <div className="flex flex-col space-y-1 md:items-end z-10">
@@ -533,7 +533,7 @@ export default function SomethingIveBuilt() {
         >
           {/* Left image */}
           <div
-            className="hidden bg-AAprimary z-10  py-4 
+            className="hidden bg-AAprimary z-10  py-4
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
@@ -543,7 +543,7 @@ export default function SomethingIveBuilt() {
                 rel="noreferrer"
               >
                 <div
-                  className="absolute w-full h-full rounded bg-AAprimary 
+                  className="absolute w-full h-full rounded bg-AAprimary
            transition-opacity opacity-60 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
@@ -572,7 +572,7 @@ export default function SomethingIveBuilt() {
             </div>
 
             <div
-              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6   
+              className="px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6
             col-span-8 flex flex-col items-start  sm:space-y-3 md:order-1"
             >
               <div className="flex flex-col space-y-1  z-10">

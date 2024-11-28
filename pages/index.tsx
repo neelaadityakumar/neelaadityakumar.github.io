@@ -9,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
 import Skills from "../components/Skills";
+import SomethingIveBuilt from "../components/Home/SomethingIveBuilt/SomethingIveBuilt";
 
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
@@ -92,11 +93,9 @@ export default function Home() {
           sectionsRef={homeRef}
         />
         <MyName finishedLoading={context.sharedState.finishedLoading} />
-
         <AboutMe ref={aboutRef} />
-
         <Skills />
-        <WhereIHaveWorked />
+        <WhereIHaveWorked /> {/* <SomethingIveBuilt /> */}
         <GetInTouch />
       </div>
     </>

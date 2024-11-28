@@ -38,10 +38,7 @@ export default function GetInTouch() {
           target={"_blank"}
           rel="noreferrer"
         >
-          <button
-            className="font-mono text-sm text-AAsecondary border-AAsecondary
-                            px-8 py-4 border-[1.5px] rounded "
-          >
+          <button className="font-mono text-sm text-AAsecondary border-AAsecondary px-8 py-4 border-[1.5px] rounded ">
             Say Hello
           </button>
         </a>
