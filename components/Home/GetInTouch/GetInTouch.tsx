@@ -34,7 +34,7 @@ export default function GetInTouch() {
 
       <div className="my-8 pt-4">
         <a
-          href="mailto:neelaadityakumar@gmail.com"
+          href="https://calendly.com/neelaadityakumar/30min"
           target={"_blank"}
           rel="noreferrer"
         >
