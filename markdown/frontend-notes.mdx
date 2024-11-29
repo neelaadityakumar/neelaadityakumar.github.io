@@ -1099,3 +1099,132 @@
   - **boolean → number**: `true` becomes `1`, `false` becomes `0`
   - **null or undefined → number**: `0` and `NaN` respectively
   - **null or undefined → string**: `'null'` and `'undefined'` respectively
+    **React waits until _all_ code in the event handlers has run before processing your state updates.**
+
+This lets you update multiple state variables—even from multiple components—without triggering too many [re-renders.](https://react.dev/learn/render-and-commit#re-renders-when-state-updates) But this also means that the UI won’t be updated until _after_ your event handler, and any code in it, completes. This behavior, also known as **batching**
+
+```jsx
+<button onClick={() => {
+  setNumber(number + 5);
+  setNumber(n => n + 1);
+}}>
+```
+
+1. `setNumber(number + 5)`: `number` is `0`, so `setNumber(0 + 5)`. React adds *“replace with `5`”* to its queue.
+2. `setNumber(n => n + 1)`: `n => n + 1` is an updater function. React adds *that function* to its queue.
+
+During the next render, React goes through the state queue:
+
+| queued update      | `n`          | returns     |
+| ------------------ | ------------ | ----------- |
+| ”replace with `5`” | `0` (unused) | `5`         |
+| `n => n + 1`       | `5`          | `5 + 1 = 6` |
+
+React stores `6` as the final result and returns it from `useState`.
+
+You may have noticed that `setState(5)` actually works like `setState(n => 5)`, but `n` is unused!
+
+useRef
+
+You can access the current value of that ref through the `ref.current` property. This value is intentionally mutable, meaning you can both read and write to it. It’s like a secret pocket of your component that React doesn’t track.
+
+Note that **the component doesn’t re-render with every increment.** Like state, refs are retained by React between re-renders. However, setting state re-renders a component. Changing a ref does not!
+
+Limitations of React state don’t apply to refs. For example, state acts like a [snapshot for every render](https://react.dev/learn/state-as-a-snapshot) and [doesn’t update synchronously.](https://react.dev/learn/queueing-a-series-of-state-updates) But when you mutate the current value of a ref, it changes immediately:
+
+`ref.current = 5;console.log(ref.current); // 5`
+
+components that _want_ to expose their DOM nodes have to **opt in** to that behavior. A component can specify that it “forwards” its ref to one of its children. Here’s how `MyInput` can use the `forwardRef` API:
+
+```jsx
+const MyInput = forwardRef((props, ref) => {
+  return <input {...props} ref={ref} />;
+});
+```
+
+`MyInput` exposes the original DOM input element. This lets the parent component call `focus()` on it. However, this also lets the parent component do something else—for example, change its CSS styles. In uncommon cases, you may want to restrict the exposed functionality. You can do that with `useImperativeHandle`:
+
+```jsx
+import { forwardRef, useRef, useImperativeHandle } from "react";
+
+const MyInput = forwardRef((props, ref) => {
+  const realInputRef = useRef(null);
+  useImperativeHandle(ref, () => ({
+    // Only expose focus and nothing else
+    focus() {
+      realInputRef.current.focus();
+    },
+  }));
+  return <input {...props} ref={realInputRef} />;
+});
+```
+
+```jsx
+// Child Component
+const ChildComponent = forwardRef((props, ref) => {
+  const [count, setCount] = useState(0);
+
+  useImperativeHandle(ref, () => ({
+    increment() {
+      setCount(count + 1);
+    },
+    getCount() {
+      return count;
+    },
+  }));
+
+  return <div>{count}</div>;
+});
+
+// Parent Component
+const ParentComponent = () => {
+  const childRef = useRef();
+
+  const handleClick = () => {
+    childRef.current.increment();
+  };
+
+  return (
+    <>
+      <ChildComponent ref={childRef} />
+      <button onClick={handleClick}>Increment</button>
+    </>
+  );
+};
+```
+
+In React, [state updates are queued.](https://react.dev/learn/queueing-a-series-of-state-updates) Usually, this is what you want. However, here it causes a problem because `setTodos` does not immediately update the DOM. So the time you scroll the list to its last element, the todo has not yet been added. This is why scrolling always “lags behind” by one item.
+
+To fix this issue, you can force React to update (“flush”) the DOM synchronously. To do this, import `flushSync` from `react-dom` and **wrap the state update** into a `flushSync` call:
+
+```jsx
+flushSync(() => {
+  setTodos([...todos, newTodo]);
+});
+listRef.current.lastChild.scrollIntoView();
+```
+
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called [reconciliation](https://legacy.reactjs.org/docs/reconciliation.html).
+
+# What is “React Fiber”?
+
+Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM
+
+# Render and Commit Phases 🔗︎
+
+The React team divides this work into two phases, conceptually:
+
+- The "Render phase" contains all the work of rendering components and calculating changes
+- The "Commit phase" is the process of applying those changes to the DOM
+
+After React has updated the DOM in the commit phase, it updates all refs accordingly to point to the requested DOM nodes and component instances. It then synchronously runs the `componentDidMount` and `componentDidUpdate` class lifecycle methods, and the `useLayoutEffect` hooks.React then sets a short timeout, and when it expires, runs all the `useEffect` hooks. This step is also known as the "Passive Effects" phase.
+
+https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
+
+**React's default behavior is that when a parent component renders, React will recursively render *all* child components inside of it!**
+
+**Rendering a component will, by default, cause *all* components inside of it to be rendered too!**
+
+**In normal rendering, React does *not* care whether "props changed" - it will render child components unconditionally just because the parent rendered!**
+
+Remember, **rendering is not a *bad* thing - it's how React knows whether it needs to actually make any changes to the DOM!**
