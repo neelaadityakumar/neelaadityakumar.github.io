@@ -14,18 +14,15 @@ import { posts } from "../constant";
 export default function BlogPost({ post }) {
   return (
     <div className="container mx-auto px-4 py-8 pt-24">
-      {" "}
       <Header title="Blog Home" />
       <MdxLayout>
         <div>
-          <h1 className="text-AAsecondary text-4xl font-bold">{post.title}</h1>
+          <h1 className="text-white text-4xl font-bold">{post.title}</h1>
           <div className="mt-6">
-            {/* Render the MDX content using MDXRemote */}
-
             <MDXRemote {...post.content} components={overrideComponents} />
           </div>
         </div>
-      </MdxLayout>{" "}
+      </MdxLayout>
       <GetInTouch />
     </div>
   );

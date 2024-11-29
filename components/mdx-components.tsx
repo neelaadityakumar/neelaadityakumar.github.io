@@ -1,3 +1,5 @@
+import Pre from "./Pre";
+
 function CustomH1({ children }: { children: React.ReactNode }) {
   return (
     <h1 className="text-AAsecondary text-3xl md:text-4xl font-bold">
@@ -123,4 +125,5 @@ export const overrideComponents = {
   li: CustomLi,
   img: CustomImage,
   video: CustomVideo,
+  pre: (props: any) => <Pre {...props} />,
 };

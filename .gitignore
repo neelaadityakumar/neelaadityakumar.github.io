@@ -1,13 +1,13 @@
 build
 out
 .env.local
-
+.next/
 .env
 # Node modules
 /node_modules
-
+package-lock.json
 # Build output
-
+yarn.lock
 # Log files
 npm-debug.log
 yarn-debug.log
