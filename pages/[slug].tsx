@@ -15,9 +15,8 @@ export default function BlogPost({ post }) {
   return (
     <div className="container mx-auto px-4 py-8 pt-24">
       <Header title="Blog Home" />
-      <MdxLayout>
+      <MdxLayout header={post.title} subheader={post.subheader}>
         <div>
-          <h1 className="text-white text-4xl font-bold">{post.title}</h1>
           <div className="mt-6">
             <MDXRemote {...post.content} components={overrideComponents} />
           </div>

@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8 pt-32">
       <Header title="Blog Home" />
-      <h1 className="text-AAsecondary text-4xl font-bold">Blog Home</h1>
       <ul className="mt-6">
         {posts.map((post) => (
           <li key={post.slug} className="mb-6">

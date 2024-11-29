@@ -39,7 +39,16 @@ function CustomP({ children }: { children: React.ReactNode }) {
     </p>
   );
 }
-
+function CustomAnchor({ children, ...props }: { children: React.ReactNode }) {
+  return (
+    <a
+      {...props}
+      className="text-AAsecondary font-extrabold dark:text-gray-300 leading-relaxed"
+    >
+      {children}
+    </a>
+  );
+}
 function CustomStrong({ children }: { children: React.ReactNode }) {
   return (
     <strong className="text-gray-200 font-extrabold dark:text-gray-300 leading-relaxed">
@@ -54,21 +63,9 @@ function CustomCode({ children }: { children: React.ReactNode }) {
   );
 }
 
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Custom unordered list component that applies consistent styling
- * for list items. It uses Tailwind CSS classes to set the list style
- * to disc, padding, and text color for both light and dark themes.
- *
- * @param children - The content to be displayed inside the list.
- */
-/******  5ab103d3-b2c8-4ba5-9eb4-93e7ca4b2528  *******/ function CustomUl({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function CustomUl({ children }: { children: React.ReactNode }) {
   return (
-    <ul className="list-disc pl-6 text-gray-400 dark:text-gray-300 space-y-2">
+    <ul className="list-disc marker:text-[#ff6347] pl-6 text-gray-400 dark:text-gray-300 space-y-2">
       {children}
     </ul>
   );
@@ -76,7 +73,7 @@ function CustomCode({ children }: { children: React.ReactNode }) {
 
 function CustomOl({ children }: { children: React.ReactNode }) {
   return (
-    <ol className="list-decimal pl-6 text-gray-400 dark:text-gray-300 space-y-2">
+    <ol className="list-decimal marker:text-[#ff6347] pl-6 text-gray-400 dark:text-gray-300 space-y-2">
       {children}
     </ol>
   );
@@ -126,4 +123,5 @@ export const overrideComponents = {
   img: CustomImage,
   video: CustomVideo,
   pre: (props: any) => <Pre {...props} />,
+  a: CustomAnchor,
 };
