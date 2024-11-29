@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
 const MobileMenu = (props) => {
@@ -5,6 +6,8 @@ const MobileMenu = (props) => {
     props.setRotate(!props.rotate);
     props.setShowElement(!props.ShowElement);
   };
+
+  const router = useRouter();
   return (
     <>
       <motion.div
@@ -91,14 +94,12 @@ const MobileMenu = (props) => {
               Contact
             </span>
           </Link>
-          <Link
-            to="GetInTouchSection"
-            spy={true}
-            smooth={true}
-            offset={100}
-            duration={200}
-            onClick={() => closeMenu()}
-            href={"https://neelaadityakumar.github.io/blog"}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              closeMenu();
+              router.push("/blog", "/blog");
+            }}
             className="flex flex-col text-center space-y-2"
           >
             <span className="text-AAsecondary text-xs font-mono">04.</span>
@@ -108,7 +109,7 @@ const MobileMenu = (props) => {
             >
               Blog
             </span>
-          </Link>
+          </button>
           <a
             href={"/ADITYA-KUMAR-RESUME.pdf"}
             target={"_blank"}
