@@ -1230,31 +1230,31 @@ https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guid
 
 Remember, **rendering is not a *bad* thing - it's how React knows whether it needs to actually make any changes to the DOM!**
 
-- How to improve performance
+# How to improve performance
 
-  **Tree shaking**
+**Tree shaking**
 
-  Tree shaking also known as unused exports is a process of removing unused code from the JavaScript bundles
+Tree shaking also known as unused exports is a process of removing unused code from the JavaScript bundles
 
-  **Code Splitting**
+**Code Splitting**
 
-  Adaptive loading is the loading of resources or features based on the user device capabilities and the network condition. For example:
+Adaptive loading is the loading of resources or features based on the user device capabilities and the network condition. For example:
 
-  - For users on the slower network, serve low-quality images, do not autoplay the videos, etc.
-  - For users with limited processing capacity on the devices, do not provide large animations.
+- For users on the slower network, serve low-quality images, do not autoplay the videos, etc.
+- For users with limited processing capacity on the devices, do not provide large animations.
 
-  **SSG vs CSR**
+**SSG vs CSR**
 
-  - **Server-side rendered**:- In SSR, every time a page is navigated in the browser, the request is sent to the server and the server generates a new HTML page with data pre-filled and sends it back to the browser. This HTML is then parsed and rendered in the browser.
-  - **Client-side rendered**:- In CSR, Only the HTML page is there which is loaded initially, after that the page navigation is handled on the client itself (browser) and only the data is fetched from the server through any means like Rest APIs and then the UI is updated with the help of JavaScript.
+- **Server-side rendered**:- In SSR, every time a page is navigated in the browser, the request is sent to the server and the server generates a new HTML page with data pre-filled and sends it back to the browser. This HTML is then parsed and rendered in the browser.
+- **Client-side rendered**:- In CSR, Only the HTML page is there which is loaded initially, after that the page navigation is handled on the client itself (browser) and only the data is fetched from the server through any means like Rest APIs and then the UI is updated with the help of JavaScript.
 
-  **Load script efficiently with async and defer**
+**Load script efficiently with async and defer**
 
-  Whenever it hits the `script` tag it stops the parsing of the DOM and starts fetching the script (If it is external) and then executes it and later resumes the parsing of DOM.
+Whenever it hits the `script` tag it stops the parsing of the DOM and starts fetching the script (If it is external) and then executes it and later resumes the parsing of DOM.
 
-  `async` downloads the script while the DOM is parsing and only pauses the DOM for execution of the script.
+`async` downloads the script while the DOM is parsing and only pauses the DOM for execution of the script.
 
-  `defer` downloads the script while the DOM is still parsing but executes them only after the parsing is finished
+`defer` downloads the script while the DOM is still parsing but executes them only after the parsing is finished
 
 - **How a web page is rendered in browser?**
 
