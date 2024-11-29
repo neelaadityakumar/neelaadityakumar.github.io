@@ -2,10 +2,8 @@ import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link as ReactScrollLink } from "react-scroll";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function DesktopMenu(props: { finishedLoading: boolean }) {
-  const router = useRouter();
   return (
     <div className="font-mono text-xs md:flex hidden flex-row items-center space-x-8 ">
       <motion.div
@@ -140,7 +138,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         }}
         className="text-AAsecondary"
       >
-        <Link href={`${router.basePath}/blog`}>
+        <Link href="https://neelaadityakumar.github.io/blog">
           &gt; 04.{" "}
           <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">
             Blog

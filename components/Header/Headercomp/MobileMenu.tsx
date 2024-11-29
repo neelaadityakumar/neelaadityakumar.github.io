@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
 const MobileMenu = (props) => {
@@ -6,8 +5,6 @@ const MobileMenu = (props) => {
     props.setRotate(!props.rotate);
     props.setShowElement(!props.ShowElement);
   };
-
-  const router = useRouter();
   return (
     <>
       <motion.div
@@ -95,7 +92,7 @@ const MobileMenu = (props) => {
             </span>
           </Link>
           <a
-            href={`${router.basePath}/blog`}
+            href={"https://neelaadityakumar.github.io/blog"}
             className="flex flex-col text-center space-y-2"
           >
             <span className="text-AAsecondary text-xs font-mono">04.</span>
