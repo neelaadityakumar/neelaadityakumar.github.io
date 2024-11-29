@@ -1229,3 +1229,93 @@ https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guid
 **In normal rendering, React does *not* care whether "props changed" - it will render child components unconditionally just because the parent rendered!**
 
 Remember, **rendering is not a *bad* thing - it's how React knows whether it needs to actually make any changes to the DOM!**
+
+- How to improve performance
+
+  **Tree shaking**
+
+  Tree shaking also known as unused exports is a process of removing unused code from the JavaScript bundles
+
+  **Code Splitting**
+
+  Adaptive loading is the loading of resources or features based on the user device capabilities and the network condition. For example:
+
+  - For users on the slower network, serve low-quality images, do not autoplay the videos, etc.
+  - For users with limited processing capacity on the devices, do not provide large animations.
+
+  **SSG vs CSR**
+
+  - **Server-side rendered**:- In SSR, every time a page is navigated in the browser, the request is sent to the server and the server generates a new HTML page with data pre-filled and sends it back to the browser. This HTML is then parsed and rendered in the browser.
+  - **Client-side rendered**:- In CSR, Only the HTML page is there which is loaded initially, after that the page navigation is handled on the client itself (browser) and only the data is fetched from the server through any means like Rest APIs and then the UI is updated with the help of JavaScript.
+
+  **Load script efficiently with async and defer**
+
+  Whenever it hits the `script` tag it stops the parsing of the DOM and starts fetching the script (If it is external) and then executes it and later resumes the parsing of DOM.
+
+  `async` downloads the script while the DOM is parsing and only pauses the DOM for execution of the script.
+
+  `defer` downloads the script while the DOM is still parsing but executes them only after the parsing is finished
+
+- **How a web page is rendered in browser?**
+
+  In each HTTP request that browser makes for an HTML page, the server returns the data into bytes, these bytes are then converted to Characters, Tokens, Nodes, and finally DOM (Document Object Model).
+
+  Once the DOM is generated, the parsing of the page starts, the HTML contains CSS code or links, JavaScript code or links, media elements such as images, etc, each of them is then parsed separately and plugged together to create a render tree, which is then converted to the layout and then is painted on the screen at the refresh rate of 60 frames per second.
+
+  This complete process is called a critical rendering path. Optimizing the critical rendering path helps to load the web page faster and without glitches or janks.
+
+  The complete page rendering can be broken down into 5 different steps.
+
+  - [Creation of DOM](https://learnersbucket.com/examples/web/how-a-web-page-is-rendered-in-browser/#dom)
+  - [Creation of CSSOM](https://learnersbucket.com/examples/web/how-a-web-page-is-rendered-in-browser/#cssom)
+  - [Formation of Render tree](https://learnersbucket.com/examples/web/how-a-web-page-is-rendered-in-browser/#render-tree)
+  - [Layouting](https://learnersbucket.com/examples/web/how-a-web-page-is-rendered-in-browser/#layout)
+  - [Paint](https://learnersbucket.com/examples/web/how-a-web-page-is-rendered-in-browser/#paint)
+
+  ## **Creation of DOM**
+
+  When an HTML is returned as an HTTP response in the browser the data we receive is in bytes, which is then converted to characters, tokens, nodes, and DOM in the order.
+
+  ![](https://learnersbucket.com/ezoimgfmt/i0.wp.com/learnersbucket.com/wp-content/uploads/2023/06/DOM-creation.png?resize=768%2C600&ssl=1&ezimgfmt=rs:768x600/rscb1/ng:webp/ngcb1)
+
+  The DOM (document object model) is created as the HTML is parsed as a tree-like representation of different HTML nodes. When the HTML is being parsed it encounters styles associated with DOM written inline or imported, script which when loaded can result in the DOM manipulation.
+
+  The external elements like scripts and media can be blocked, thus it may halt the HTML parsing until they are completely loaded. That is why it is always advised to load the script at the end or use [defer / async](https://learnersbucket.com/examples/html/how-to-load-script-efficiently-with-async-and-defer) so that web page is loaded smoothly.
+
+  Once the Styles are loaded the CSSOM (CSS object model) is formed which is then matched with their respective HTML element node in the DOM via the browser engine.
+
+  ## **Creating of CSSOM**
+
+  CSS object model is similar to the DOM in structure but differs in nature. As the DOM stores all the content of the web page, CSSOM stores all the styling information. It blocks the rendering of the webpage until all the CSS style is loaded, parsed, and applied to each DOM node. It is blocking in nature because CSS styles can be overridden.
+
+  Each browser engine follows a set of rules for CSS to apply the styles to the corresponding DOM node. The C in the CSS stands for cascade, thus the styles are also cascaded down, which means the child nodes inherit few styles from the parent nodes.
+
+  When the browser starts parsing the CSSOM it applies browser-specific styles (user agent) to the nodes as well.
+
+  ## **Formation of Render Tree**
+
+  Once the DOM and the CSSOM are ready, the browser engine combines them together to create the render tree.
+
+  ![](https://learnersbucket.com/ezoimgfmt/i0.wp.com/learnersbucket.com/wp-content/uploads/2023/06/Render-Tree-formation.png?resize=768%2C600&ssl=1&ezimgfmt=rs:768x600/rscb1/ng:webp/ngcb1)
+
+  The render tree is constructed by traversing each node in the DOM and attaching its corresponding style from the CSSOM.
+
+  The render tree only contains the visible element, for example, if any node style `display: none;` neither itself nor any of its descendants will be part of the render tree.
+
+  ## **Layout**
+
+  Once the render tree is ready the layout can be created, the layout is bounded on the device dimension.
+
+  ![](https://learnersbucket.com/ezoimgfmt/i0.wp.com/learnersbucket.com/wp-content/uploads/2023/06/Box-Layout1.png?resize=768%2C400&ssl=1&ezimgfmt=rs:768x400/rscb1/ng:webp/ngcb1)
+
+  The placement of each element is decided through layouting, it decides the dimension of each element as well as their relation to the other elements.
+
+  The layout is impacted by the viewport meta tag’s definition of the layout viewport’s width. Without it, the browser uses the standard viewport width, which on full-screen browsers by default is often 960px. By setting meta name=”viewport” content=”width=device-width”>, you can force full-screen browsers, like the one on your phone, to use the device’s width rather than the viewport’s standard width. When a user flips their phone between landscape and portrait mode, the device width changes. Every time a device is rotated or a browser is otherwise resized, the layout takes place.
+
+  ## **Paint the page on the screen**
+
+  Once the layout is ready, it can be painted pixel by pixel on the screen at the refresh rate of 60fps.
+
+  Initially, the entire page will be painted and thereafter if any DOM manipulation occurs only those elements will be reconstructed and painted again.
+
+  The more the DOM manipulation, the more the re-rendering of the page, thus we should avoid the frequent DOM changes.
