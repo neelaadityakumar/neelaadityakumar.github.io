@@ -6,6 +6,13 @@ let nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+        pathname: "/sudheerj/reactjs-interview-questions/raw/master/images/**",
+      },
+    ],
   },
   webpack(config, options) {
     config.module.rules.push({

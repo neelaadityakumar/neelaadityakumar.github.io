@@ -12,4 +12,10 @@ export const posts = [
     date: "2024-11-20",
     slug: "flex-box",
   },
+  {
+    title: "Frontend Notes",
+    description: "Last Minute Revision Notes For frontend engineer",
+    slug: "frontend-notes",
+    date: "30-11-2024",
+  },
 ];
