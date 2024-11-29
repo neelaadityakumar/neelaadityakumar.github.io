@@ -5,10 +5,12 @@ import IconMenu from "./Headercomp/IconMenu";
 import MobileMenu from "./Headercomp/MobileMenu";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = (props: any) => {
   const [ShowElement, setShowElement] = useState(false);
   const [rotate, setRotate] = useState<boolean>(false);
+  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
@@ -48,7 +50,7 @@ const Header = (props: any) => {
           </Link>
           {props.title && (
             <Link
-              href={"https://neelaadityakumar.github.io/blog"}
+              href={`${router.basePath}/blog`}
               className="text-AAsecondary text-2xl font-semibold hover:underline"
             >
               {props.title}

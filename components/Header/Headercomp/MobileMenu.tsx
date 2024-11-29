@@ -94,12 +94,8 @@ const MobileMenu = (props) => {
               Contact
             </span>
           </Link>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              closeMenu();
-              router.push("/blog", "/blog");
-            }}
+          <a
+            href={`${router.basePath}/blog`}
             className="flex flex-col text-center space-y-2"
           >
             <span className="text-AAsecondary text-xs font-mono">04.</span>
@@ -109,7 +105,7 @@ const MobileMenu = (props) => {
             >
               Blog
             </span>
-          </button>
+          </a>
           <a
             href={"/ADITYA-KUMAR-RESUME.pdf"}
             target={"_blank"}
