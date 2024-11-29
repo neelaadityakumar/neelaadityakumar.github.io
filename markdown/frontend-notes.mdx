@@ -1099,7 +1099,10 @@
   - **boolean → number**: `true` becomes `1`, `false` becomes `0`
   - **null or undefined → number**: `0` and `NaN` respectively
   - **null or undefined → string**: `'null'` and `'undefined'` respectively
-    **React waits until _all_ code in the event handlers has run before processing your state updates.**
+
+# React Fiber
+
+**React waits until _all_ code in the event handlers has run before processing your state updates.**
 
 This lets you update multiple state variables—even from multiple components—without triggering too many [re-renders.](https://react.dev/learn/render-and-commit#re-renders-when-state-updates) But this also means that the UI won’t be updated until _after_ your event handler, and any code in it, completes. This behavior, also known as **batching**
 
