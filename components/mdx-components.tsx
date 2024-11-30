@@ -1,3 +1,4 @@
+import CodeFromURL from "./CodeFromURL";
 import Pre from "./Pre";
 
 function CustomH1({ children }: { children: React.ReactNode }) {
@@ -124,4 +125,5 @@ export const overrideComponents = {
   video: CustomVideo,
   pre: (props: any) => <Pre {...props} />,
   a: CustomAnchor,
+  CodeFromURL,
 };
