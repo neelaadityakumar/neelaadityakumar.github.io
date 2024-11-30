@@ -3,7 +3,13 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github-dark.css"; // Choose your theme
 import Pre from "./Pre";
 
-const CodeFromURL = ({ url }: { url: string }) => {
+const CodeFromURL = ({
+  url,
+  language = "javascript",
+}: {
+  url: string;
+  language?: string;
+}) => {
   const [code, setCode] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const codeRef = useRef<HTMLElement>(null);
@@ -41,7 +47,7 @@ const CodeFromURL = ({ url }: { url: string }) => {
 
   return (
     <Pre>
-      <code ref={codeRef} className="language-javascript">
+      <code ref={codeRef} className={`language-${language}`}>
         {code}
       </code>
     </Pre>

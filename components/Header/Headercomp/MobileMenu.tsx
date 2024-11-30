@@ -1,5 +1,6 @@
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link } from "react-scroll";
+import { getURL } from "../../../util/helper";
 const MobileMenu = (props) => {
   const closeMenu = () => {
     props.setRotate(!props.rotate);
@@ -92,7 +93,7 @@ const MobileMenu = (props) => {
             </span>
           </Link>
           <a
-            href={"https://neelaadityakumar.github.io/blog"}
+            href={getURL("/blog")}
             className="flex flex-col text-center space-y-2"
           >
             <span className="text-AAsecondary text-xs font-mono">04.</span>

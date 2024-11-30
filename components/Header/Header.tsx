@@ -5,6 +5,7 @@ import IconMenu from "./Headercomp/IconMenu";
 import MobileMenu from "./Headercomp/MobileMenu";
 
 import Link from "next/link";
+import { getURL } from "../../util/helper";
 
 const Header = (props: any) => {
   const [ShowElement, setShowElement] = useState(false);
@@ -43,12 +44,12 @@ const Header = (props: any) => {
       >
         {/* Logo A */}
         <div className="flex gap-8 items-center">
-          <Link href={"https://neelaadityakumar.github.io"}>
+          <Link href={getURL("/")}>
             <Logo finishedLoading={true} />
           </Link>
           {props.title && (
             <Link
-              href={"https://neelaadityakumar.github.io/blog"}
+              href={getURL("/blog")}
               className="text-AAsecondary text-2xl font-semibold hover:underline"
             >
               {props.title}

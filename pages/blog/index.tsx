@@ -3,6 +3,7 @@ import Link from "next/link";
 import { posts } from "../../constant";
 import Header from "../../components/Header/Header";
 import GetInTouch from "../../components/Home/GetInTouch/GetInTouch";
+import { getURL } from "../../util/helper";
 // data/posts.js
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
         {posts.map((post) => (
           <li key={post.slug} className="mb-6">
             <Link
-              href={`https://neelaadityakumar.github.io/${post.slug}`}
+              href={getURL(`/${post.slug}`)}
               className="text-AAsecondary text-2xl font-semibold hover:underline"
             >
               {post.title}

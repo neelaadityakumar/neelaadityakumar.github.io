@@ -7,10 +7,10 @@ export const posts = [
     date: "30-11-2024",
   },
   {
-    title: "Frontend Notes",
-    subheader: "Last Minute Revision Notes For frontend engineer",
-    description: "Last Minute Revision Notes For frontend engineer",
-    slug: "code",
+    title: "Javascript coding",
+    subheader: "Javascript coding solutionns from bfe.dev",
+    description: "Javascript coding solutionns from bfe.dev",
+    slug: "bfe-dev",
     date: "30-11-2024",
   },
 ];
