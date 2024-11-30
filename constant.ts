@@ -8,8 +8,8 @@ export const posts = [
   },
   {
     title: "Javascript coding",
-    subheader: "Javascript coding solutionns from bfe.dev",
-    description: "Javascript coding solutionns from bfe.dev",
+    subheader: "Javascript coding solutions from bfe.dev",
+    description: "Javascript coding solutions from bfe.dev",
     slug: "bfe-dev",
     date: "30-11-2024",
   },
