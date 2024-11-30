@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "animate.css/animate.min.css";
+
 import AppContext from "../components/AppContextFolder/AppContext";
 import { useState } from "react";
 

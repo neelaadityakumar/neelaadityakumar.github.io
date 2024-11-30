@@ -10,18 +10,24 @@ import GetInTouch from "../components/Home/GetInTouch/GetInTouch";
 import { overrideComponents } from "../components/mdx-components";
 import MdxLayout from "../components/mdx-layout";
 import { posts } from "../constant";
+import DraftBlogBanner from "../components/DraftBanner";
 
 export default function BlogPost({ post }) {
   return (
     <div className="container mx-auto px-4 py-8 pt-24">
       <Header title="Blog Home" />
-      <MdxLayout header={post.title} subheader={post.subheader}>
-        <div>
-          <div className="mt-6">
-            <MDXRemote {...post.content} components={overrideComponents} />
+      {post.type === "draft" ? (
+        <DraftBlogBanner />
+      ) : (
+        <MdxLayout header={post.title} subheader={post.subheader}>
+          <div>
+            <div className="mt-6">
+              <MDXRemote {...post.content} components={overrideComponents} />
+            </div>
           </div>
-        </div>
-      </MdxLayout>
+        </MdxLayout>
+      )}
+
       <GetInTouch />
     </div>
   );
@@ -37,18 +43,19 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params;
   const post = posts.find((post) => post.slug === slug);
+  let mdxContent = null;
+  if (!(post.type === "draft")) {
+    const filePath = path.join(process.cwd(), `markdown/${slug}.mdx`);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
 
-  const filePath = path.join(process.cwd(), `markdown/${slug}.mdx`);
-  const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { content, data } = matter(fileContent);
 
-  const { content, data } = matter(fileContent);
-
-  const mdxContent = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [rehypePrism],
-    },
-  });
-
+    mdxContent = await serialize(content, {
+      mdxOptions: {
+        rehypePlugins: [rehypePrism],
+      },
+    });
+  }
   return {
     props: {
       post: {
