@@ -91,7 +91,7 @@ function CustomLi({ children }: { children: React.ReactNode }) {
 function CustomImage({ src, alt }: { src: string; alt: string }) {
   return (
     <img
-      className="w-full max-w-lg mx-auto my-4 rounded-lg shadow-lg"
+      className="w-full max-w-lg mx-auto my-4 rounded-lg shadow-lg bg-white"
       src={src}
       alt={alt}
     />
