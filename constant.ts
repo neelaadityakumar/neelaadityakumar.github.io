@@ -19,7 +19,6 @@ export const posts = [
     description: "Frontend system Design",
     slug: "frontend-system-design",
     date: "30-11-2024",
-    type: "draft",
   },
   {
     title: "Frontend Machine Coding",
