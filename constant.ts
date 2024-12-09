@@ -21,7 +21,6 @@ export const posts = [
     date: "30-11-2024",
     remoteUrl: [
       "https://raw.githubusercontent.com/neelaadityakumar/Awesome-Frontend-System-Design/b510843e68ea4206b79db362db2fea1bc6bcc24f/Readme.md",
-      "https://raw.githubusercontent.com/neelaadityakumar/Awesome-Frontend-System-Design/b510843e68ea4206b79db362db2fea1bc6bcc24f/Readme.md",
     ],
   },
   {
