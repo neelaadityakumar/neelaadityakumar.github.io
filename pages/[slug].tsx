@@ -82,7 +82,7 @@ export async function getStaticProps({ params }) {
 
   if (!post.remoteUrl) {
     try {
-      const filePath = path.join(LOCAL_MARKDOWN_BASE, `${slug}.mdx`);
+      const filePath = path.join(LOCAL_MARKDOWN_BASE, `${slug}.md`);
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { content, data } = matter(fileContent);
 
