@@ -21,11 +21,70 @@ export default function BlogPost({ post }) {
 
   useEffect(() => {
     async function fetchRemoteContent() {
-      if (post.remoteUrl) {
+      const extractGitHubUsername = (url) => {
+        try {
+          const match = url.match(
+            /https:\/\/raw\.githubusercontent\.com\/([^\/]+)\//
+          );
+          if (match && match[1]) {
+            return match[1];
+          }
+          return null;
+        } catch (error) {
+          console.error("Error extracting GitHub username from URL", error);
+          return null;
+        }
+      };
+
+      if (post.remoteUrl && Array.isArray(post.remoteUrl)) {
+        try {
+          const parsedContents = await Promise.all(
+            post.remoteUrl.map(async (url) => {
+              const response = await fetch(url);
+              const markdownContent = await response.text();
+
+              // Extract GitHub username from the URL
+              const username = extractGitHubUsername(url);
+              const userLink = username
+                ? `\n\n*Markdown Credit [${username}](https://github.com/${username})*`
+                : "";
+
+              const markdownWithCredit = markdownContent + userLink;
+
+              const { content, data } = matter(markdownWithCredit);
+              return content; // Only extract raw markdown content without front matter
+            })
+          );
+
+          const combinedMarkdown = parsedContents.join("\n\n");
+
+          const mdxSerialized = await serialize(combinedMarkdown, {
+            mdxOptions: {
+              rehypePlugins: [rehypePrism],
+            },
+          });
+
+          setContent(mdxSerialized);
+        } catch (error) {
+          console.error(
+            "Error fetching and combining remote markdown content",
+            error
+          );
+        }
+      } else if (post.remoteUrl) {
         try {
           const response = await fetch(post.remoteUrl);
           const markdownContent = await response.text();
-          const { content, data } = matter(markdownContent);
+
+          // Extract GitHub username from the URL
+          const username = extractGitHubUsername(post.remoteUrl);
+          const userLink = username
+            ? `\n\n*Markdown Credit [${username}](https://github.com/${username})*`
+            : "";
+
+          const markdownWithCredit = markdownContent + userLink;
+
+          const { content, data } = matter(markdownWithCredit);
 
           const mdxSerialized = await serialize(content, {
             mdxOptions: {
