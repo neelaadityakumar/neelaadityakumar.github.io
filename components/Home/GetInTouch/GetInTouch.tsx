@@ -16,6 +16,10 @@ export default function GetInTouch() {
         open. Whether you have a question or just want to say hi, I&apos;ll try
         my best to get back to you!
       </p>
+      <img
+        src="favicon.ico"
+        className="max-w-[200px] rounded-[50%] object-center"
+      />
       <Contact />
 
       <div className="my-8 pt-4">
