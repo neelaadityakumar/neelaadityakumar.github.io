@@ -18,7 +18,7 @@ export default function GetInTouch() {
       </p>
       <img
         src="favicon.ico"
-        className="max-w-[200px] rounded-[50%] object-center"
+        className="hover:ring-AAsecondary hover:ring-2 cursor-crosshair max-w-[200px] rounded-[50%] object-center"
       />
       <Contact />
 
