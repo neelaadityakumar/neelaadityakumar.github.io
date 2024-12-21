@@ -59,9 +59,7 @@ function CustomStrong({ children }: { children: React.ReactNode }) {
 }
 
 function CustomCode({ children }: { children: React.ReactNode }) {
-  return (
-    <code className="text-AAsecondary rounded-xl  px-2 py-1">{children}</code>
-  );
+  return <code className="rounded-xl px-2 py-1">{children}</code>;
 }
 
 function CustomUl({ children }: { children: React.ReactNode }) {

@@ -109,7 +109,7 @@
 
     Some of the example which covers the above cases:
 
-    ```jsx
+    ```javascript
     0 == false   // true
     0 === false  // false
     1 == "1"     // true
@@ -129,7 +129,7 @@
 
     This may have been self-evident to you, but it wasn’t to me. JS is not ‘type safe’ after all, and it seems to be able to, or at least try to, coerce anything to anything. But it doesn’t. For any two objects:
 
-    ```jsx
+    ```javascript
     anyObject == anyOtherObject;
     ```
 
@@ -223,8 +223,8 @@
 
     A cookie is a piece of data that is stored on your computer to be accessed by your browser. Cookies are saved as key/value pairs. For example, you can create a cookie named username as below,
 
-    ```
-    document.cookie = "username=John"
+    ```javascript
+    document.cookie = "username=John";
     ```
 
     ![](https://github.com/sudheerj/javascript-interview-questions/raw/master/images/cookie.png)
@@ -412,7 +412,7 @@
 
     Let's take example with one source and one target object,
 
-    ```jsx
+    ```javascript
     const target = { a: 1, b: 2 };
     const source = { b: 3, c: 4 };
 
@@ -429,7 +429,7 @@
 
     The Object.defineProperty() static method is used to define a new property directly on an object, or modify an existing property on an object, and returns the object. Let's see an example to know how to define property,
 
-    ```jsx
+    ```javascript
     const newObject = {};
 
     Object.defineProperty(newObject, "newProperty", {
@@ -486,7 +486,7 @@
 
     You can use the `Object.setPrototypeOf()` method that sets the prototype (i.e., the internal `Prototype` property) of a specified object to another object or null. For example, if you want to set prototype of a square object to rectangle object would be as follows,
 
-    ```
+    ```javascript
     Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
     Object.setPrototypeOf({}, null);
     ```
@@ -567,7 +567,7 @@
 
     Example:
 
-    ```
+    ```javascript
     console.log("Start"); //1
 
     queueMicrotask(() => {
@@ -705,19 +705,19 @@
 
     **Input:**
 
-    ```
+    ```html
     <input type="text" onkeyup="processChange()" />
     ```
 
     **Button:**
 
-    ```
+    ```html
     <button onclick="processChange()">Click me</button>
     ```
 
     **Windows event:**
 
-    ```
+    ```javascript
     window.addEventListener("scroll", processChange);
     ```
 
@@ -864,7 +864,7 @@
 
          **What is the output of below code**
 
-         ```
+         ```javascript
          const arrowFunc = () => arguments.length;
          console.log(arrowFunc(1, 2, 3));
          ```
@@ -949,7 +949,7 @@
 
    > Note when using react-error-boundary: ErrorBoundary is a client component. You can only pass props to it that are serializable or use it in files that have a "use client"; directive.
 
-   ```
+   ```jsx
    "use client";
 
    import { ErrorBoundary } from "react-error-boundary";
@@ -1198,7 +1198,7 @@ In React, [state updates are queued.](https://react.dev/learn/queueing-a-series-
 
 To fix this issue, you can force React to update (“flush”) the DOM synchronously. To do this, import `flushSync` from `react-dom` and **wrap the state update** into a `flushSync` call:
 
-```jsx
+```javascript
 flushSync(() => {
   setTodos([...todos, newTodo]);
 });
