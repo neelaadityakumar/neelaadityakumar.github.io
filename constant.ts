@@ -12,6 +12,7 @@ export const posts = [
     description: "Javascript coding solutions from bfe.dev",
     slug: "bfe-dev",
     date: "30-11-2024",
+    type: "draft",
   },
   {
     title: "Frontend System Design",
