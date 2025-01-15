@@ -19,7 +19,9 @@ export default function Home() {
               {post.title}
             </Link>
             <p className="text-gray-400">{post.description}</p>
-            <span className="text-sm text-gray-500">{post.date}</span>
+            <span className="text-sm text-gray-500">
+              {post?.type === "draft" ? "Coming Soon" : post.date}
+            </span>
           </li>
         ))}
       </ul>{" "}
