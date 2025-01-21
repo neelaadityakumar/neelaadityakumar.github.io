@@ -24,12 +24,12 @@ module.exports = {
     },
     extend: {
       animation: {
-        rotate: "rotate 4s linear infinite",
+        rotate: "rotate 2s ease-in infinite",
       },
       keyframes: {
         rotate: {
           "0%": { transform: "rotate(0deg) scale(10)" },
-          "100%": { transform: "rotate(-360deg) scale(10)" },
+          "100%": { transform: "rotate(360deg) scale(10)" },
         },
       },
       fontFamily: {
