@@ -36,9 +36,16 @@ export default function MyName(props: any) {
 
       <div className="mt-12">
         <a href={"/ADITYA-KUMAR-RESUME.pdf"} target={"_blank"} rel="noreferrer">
-          <button className=" text-AAsecondary border rounded px-4 sm:px-8 py-3 sm:py-4 border-AAsecondary">
-            Check out my resume!
-          </button>
+          <div className="mx-auto flex w-full max-w-lg items-center justify-center ">
+            <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden  rounded-xl  p-[1.5px]">
+              <div className="animate-rotate absolute inset-0 h-full w-full rounded-full  bg-[conic-gradient(#64ffda_20deg,transparent_120deg)]"></div>
+              <div className="relative z-20 flex w-full rounded-[0.60rem] border border-gray-700 bg-[#1f1f1f] p-2">
+                <button className=" text-AAsecondary rounded px-4 sm:px-8 py-3 sm:py-4 ">
+                  Check out my resume!
+                </button>{" "}
+              </div>
+            </div>
+          </div>
         </a>
       </div>
     </div>
