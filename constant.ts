@@ -5,6 +5,9 @@ export const posts = [
     description: "Last Minute Revision Notes For frontend engineer",
     slug: "frontend-notes",
     date: "30-11-2024",
+    remoteUrl: [
+      "https://raw.githubusercontent.com/neelaadityakumar/Frontend-Notes/17acef957a17b6b5d899082b14a273b0dc1ee6f0/README.md",
+    ],
   },
   {
     title: "Javascript Coding",
