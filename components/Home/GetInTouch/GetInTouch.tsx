@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowIcon from "../../Icons/ArrowIcon";
 import Contact from "../../Contact";
+import { personalData } from "../../../util/constant";
 export default function GetInTouch() {
   return (
     <div
@@ -24,7 +25,7 @@ export default function GetInTouch() {
 
       <div className="my-8 pt-4">
         <a
-          href="https://calendly.com/neelaadityakumar/30min"
+          href={`mailto:${personalData.email}`}
           target={"_blank"}
           rel="noreferrer"
         >
